@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>디자이너/매장 검색</title>
+
+	<link rel="stylesheet" href="../../css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="../../css/jquery.timepicker.css">
+	<link rel="stylesheet" href="../../css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dnsearchpage.css">
+	<!-- <link rel="stylesheet" href="../../css/datepicker.css" /> -->
+	<link rel="stylesheet" href="../../css/custom.css" type="text/css" />
+
+
+	<script src="../../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="../../js/layout.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+	<!-- <script src="js/datepicker.js"></script> -->
+	<script src="../../js/jquery.timepicker.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<!-- 마이메뉴 시작 -->
+		<div class="mymenu">
+			<div class="btnset">
+				<div class="backbtn" id="back">
+					<a href="javascript:change('#reserve, #interestShop, #interestDn')"></a>
+				</div>
+				<div class="closebtn">
+					<a href="javascript:void(0)"></a>
+				</div>
+			</div>
+			<div class="myMenulist">
+				<!-- 로그인화면 -->
+				<div class="login">
+					<button type="button" class="loginbtn">카카오계정으로 로그인</button>
+					<p>카카오헤어샵은 카카오 계정으로 로그인 가능합니다.</p>
+				</div>
+				<!-- 프로필화면 -->
+				<div class="profile">
+					<div class="photo">
+						<a href="javascript:void(0)"><img src="../../img/profile.jpg" alt=""></a>
+					</div>
+					<p class="name">민서</p>
+					<button type="button">프로필수정</button>
+					<button type="button">쿠폰</button>
+				</div>
+				<!-- 메뉴리스트 -->
+				<div class="group-txtLinkList" id="my">
+					<p>My</p>
+					<ul class="list">
+						<li><a href="javascript:change('#reserve')">예약관리</a></li>
+						<li><a href="javascript:change('#interestShop')">관심 매장</a></li>
+						<li><a href="javascript:change('#interestDn')">관심 디자이너</a></li>
+					</ul>
+				</div>
+				<div class="group-txtLinkList" id="custom">
+					<p>고객센터</p>
+					<ul class="list">
+						<li><a href="javascript:void(0)">공지사항</a></li>
+						<li><a href="javascript:void(0)">문의하기</a></li>
+						<li><a href="javascript:void(0)">도움말</a></li>
+						<li><a href="javascript:void(0)">입점문의</a></li>
+						<li><a href="javascript:void(0)">설정</a></li>
+					</ul>
+				</div>
+				<!-- 예약화면 -->
+				<div class="reservation-page" id="reserve">
+					<p>예약 관리</p>
+					<div class="non-reservation">
+						<p>아직 예약이 없네요</p>
+						<p>스타일 변신할 준비가 되셨나요?</p>
+						<button type="button">예약하기</button>
+					</div>
+					<!-- 예약리스트 -->
+					<div class="reserve-list-area">
+						<ul class="reserve-list">
+							<li class="card-item">
+								<div class="card-img">
+									<img src="../../img/profile.jpg" alt="">
+								</div>
+								<div class="txt-box">
+									<div class="card-header">
+										<a href="javascript:void(0)">
+											<div class="title">준오헤어 강남역스퀘어점</div>
+											<div class="info-box">
+												<span class="info">23. 3. 18 토</span>
+												<span class="info">오후 2:30</span>
+											</div>
+										</a>
+									</div>
+									<div class="card-bottom">
+										<a href="javascript:void(0)">
+											<div class="title">대표 원장 우현</div>
+											<div class="style">여성 베이직펌</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="card-item">
+								<div class="card-img">
+									<img src="../../img/profile.jpg" alt="">
+								</div>
+								<div class="txt-box">
+									<div class="card-header">
+										<a href="javascript:void(0)">
+											<div class="title">준오헤어 강남역스퀘어점</div>
+											<div class="info-box">
+												<span class="info">23. 1. 05 목</span>
+												<span class="info">오후 4:00</span>
+											</div>
+										</a>
+									</div>
+									<div class="card-bottom">
+										<a href="javascript:void(0)">
+											<div class="title">대표 원장 우현</div>
+											<div class="style">여성 베이직펌</div>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 관심매장 -->
+				<div class="interest" id="interestShop">
+					<p>관심 매장</p>
+					<div class="non-interest">
+						<p>관심 매장이 없습니다.</p>
+					</div>
+					<!-- 관심매장 리스트 -->
+					<div class="shop-list-area">
+						<ul class="shopList">
+							<li class="card-item">
+								<div class="card-img">
+									<a href="javascript:void(0)"><img src="../../img/shop-3.jpg" alt=""></a>
+								</div>
+								<div class="shop-info">
+									<a href="javascript:void(0)">
+										<div class="title">살롱드라피네 본점</div>
+										<div class="iconbox">
+											<span class="ico star">4.9</span>
+											<span class="ico review">2,575</span>
+										</div>
+										<span class="address">강남역 4번출구 바로앞</span>
+										<span class="price">커트 15,000원</span>
+									</a>
+								</div>
+							</li>
+							<li class="card-item">
+								<div class="card-img">
+									<a href="javascript:void(0)"><img src="../../img/shop-2.jpg" alt=""></a>
+								</div>
+								<div class="shop-info">
+									<a href="javascript:void(0)">
+										<div class="title">엥비떼헤어 신논현점</div>
+										<div class="iconbox">
+											<span class="ico star">4.9</span>
+											<span class="ico review">5,265</span>
+										</div>
+										<span class="address">강남역11번.강남CGV뒷편 편의점에서 두 블럭올라오셔서 왼쪽 올바른스시2층</span>
+										<span class="price">커트 18,000원</span>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 관심디자이너 -->
+				<div class="interest" id="interestDn">
+					<p>관심 디자이너</p>
+					<div class="non-interest">
+						<p>관심 디자이너가 없습니다.</p>
+					</div>
+					<!-- 관심디자이너  리스트 -->
+					<div class="dn-list-area">
+						<ul class="dn-list">
+							<li class="card-item">
+								<div class="card-img">
+									<a href="javascript:void(0)"><img src="../../img/profile.jpg" alt=""></a>
+								</div>
+								<div class="designer-info">
+									<a href="javascript:void(0)">
+										<div class="title">수석디자이너 써니</div>
+										<div class="introduce">패션디자인,미용학,향장학석사 전공자</div>
+										<div class="iconbox">
+											<span class="ico heart">17</span>
+											<span class="ico review">162</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="card-item">
+								<div class="card-img">
+									<a href="javascript:void(0)"><img src="../../img/profile04.jpg" alt=""></a>
+								</div>
+								<div class="designer-info">
+									<a href="javascript:void(0)">
+										<div class="title">원장 한나</div>
+										<div class="introduce">1인미용실 원장입니다.(13년)</div>
+										<div class="iconbox">
+											<span class="ico heart">15</span>
+											<span class="ico review">61</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="card-item">
+								<div class="card-img">
+									<a href="javascript:void(0)"><img src="../../img/profile04.jpg" alt=""></a>
+								</div>
+								<div class="designer-info">
+									<a href="javascript:void(0)">
+										<div class="title">원장 한나</div>
+										<div class="introduce">1인미용실 원장입니다.(13년)</div>
+										<div class="iconbox">
+											<span class="ico heart">15</span>
+											<span class="ico review">61</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="card-item">
+								<div class="card-img">
+									<a href="javascript:void(0)"><img src="../../img/profile04.jpg" alt=""></a>
+								</div>
+								<div class="designer-info">
+									<a href="javascript:void(0)">
+										<div class="title">원장 한나</div>
+										<div class="introduce">1인미용실 원장입니다.(13년)</div>
+										<div class="iconbox">
+											<span class="ico heart">15</span>
+											<span class="ico review">61</span>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li class="card-item">
+								<div class="card-img">
+									<a href="javascript:void(0)"><img src="../../img/profile04.jpg" alt=""></a>
+								</div>
+								<div class="designer-info">
+									<a href="javascript:void(0)">
+										<div class="title">원장 한나</div>
+										<div class="introduce">1인미용실 원장입니다.(13년)</div>
+										<div class="iconbox">
+											<span class="ico heart">15</span>
+											<span class="ico review">61</span>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 마이메뉴 끝 -->
+		<nav>
+			<div class="logo">
+				<a href="../../index.html"><img src="../../img/logo.png" alt="카카오헤어샵"></a>
+			</div>
+			<ul class="menulist">
+				<li><a href="../page1/index.html">헤어샵</a></li>
+				<li><a href="../page2/index.html">1인샵</a></li>
+				<li><a href="../page3/index.html">바버샵</a></li>
+				<li><a href="../page4/index.html">네일샵</a></li>
+			</ul>
+			<div class="mbtn"><a href="javascript:void(0)"></a></div>
+		</nav>
+	</header>
+
+
+	<div class="dn-shop-searchbox">
+		<span class="ico"></span>
+		<input type="text" id="dnshopSearch" class="dnsearchbox" placeholder="매장, 디자이너 이름으로 검색하세요"
+			onkeyup="showClose('#dnshopSearch', '#dn_shop_close')" />
+		<button type="button" class="delete" id="dn_shop_close" onclick="remove('#dnshopSearch', '#dn_shop_close')"
+			style="display:none">
+			<span class="ico_delete">검색어 삭제</span>
+		</button>
+	</div>
+	<div class="dn-shop-search-area">
+		<div class="tabnav-box-area">
+			<div class="tabnav-box">
+				<div class="tabnav-list">
+					<div class="tabnav"><a href="javascript:void(0)">통합</a></div>
+					<div class="tabnav"><a href="javascript:void(0)">헤어샵</a></div>
+					<div class="tabnav"><a href="javascript:void(0)">디자이너</a></div>
+				</div>
+			</div>
+		</div>
+		<div class=bg-color>
+			<div class="cardwrap">
+				<div class="shop-dn-card-area">
+					<div class="title">헤어샵</div>
+					<ul class="card-list">
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop-3.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">살롱드라피네 본점</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">2,575</span>
+									</div>
+									<div class="address">강남역 4번출구 바로앞</div>
+									<div class="time">10:00~20:00</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop-1.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">라리엔 강남점</div>
+									<div class="iconbox">
+										<span class="ico star">4.8</span>
+										<span class="ico review">2,575</span>
+									</div>
+									<div class="address">강남역 1,4번출구 5분거리 (강남문화원 옆 스킬라티움 예식장 맞은편)</div>
+									<div class="time">10:30~20:00(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop-2.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">라우라헤어살롱 본점</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">11</span>
+									</div>
+									<div class="address">강남역 3번 출구 도보5분 1층에 바나프레소 건물 2층 중간입니다.</div>
+									<div class="time">11:00~21:00(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="card-img">
+								<a href="javascript:void(0)"><img src="../../img/shop01.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">준오헤어 강남우성사거리점</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">290</span>
+									</div>
+									<div class="address">강남역 신분당선 4번출구 도보3분</div>
+									<div class="time">10:00~20:00</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<button type="button" class="btn-all-result">
+						45개 헤어샵 전체보기
+					</button>
+				</div>
+				<div class="shop-dn-card-area">
+					<div class="title">디자이너</div>
+					<ul class="card-list">
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile01.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">원장 이서(7년)</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">6</span>
+									</div>
+									<div class="address">숨 메이크업 & 헤어 본점</div>
+									<div class="time">09:00~18:00</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile02.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">팀장 하민(4년)</div>
+									<div class="iconbox">
+										<span class="ico star">4.9</span>
+										<span class="ico review">126</span>
+									</div>
+									<div class="address">라리엔 강남점</div>
+									<div class="time">00:00~23:53(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile03.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">디자이너 조이(5년)</div>
+									<div class="iconbox">
+										<span class="ico star">5</span>
+										<span class="ico review">4</span>
+									</div>
+									<div class="address">라리엔 강남점</div>
+									<div class="time">00:00~23:53(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+						<li class="shopcard">
+							<div class="dn-img">
+								<a href="javascript:void(0)"><img src="../../img/profile04.jpg" alt=""></a>
+							</div>
+							<div class="shop-info">
+								<a href="javascript:void(0)">
+									<div class="shoptitle">디자이너 해원(4년)</div>
+									<div class="iconbox">
+										<span class="ico star">5</span>
+										<span class="ico review">15</span>
+									</div>
+									<div class="address">라리엔 강남점</div>
+									<div class="time">00:00~23:53(휴무 일)</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<button type="button" class="btn-all-result">
+						45개 디자이너 전체보기
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="f-txt">
+			<span><a href="javascript:change()">이용약관</a></span>
+			<span><a href="javascript:change()">사업자정보</a></span>
+			<span><a href="javascript:change()">개인정보처리방침</a></span>
+			<span><a href="javascript:change()">사업자정보확인</a></span>
+		</div>
+		<div class="f-info">
+			(주)와이어트는 통신판매중개자로서 카카오헤어샵의 거래당사자가 아니며,<br />
+			입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
+		</div>
+	</footer>
+
+
+
+
+
+
+
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			cssMode: true,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+
+		var swiper2 = new Swiper(".conts .swiper-container", {
+			slidesPerView: "auto",
+			spaceBetween: 20,
+		});
+
+		$(function () {
+			//input을 datepicker로 선언
+			$("#datepicker").datepicker({
+				dateFormat: 'yy-mm-dd' //달력 날짜 형태
+				, showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+				//    ,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+				//    ,changeYear: true //option값 년 선택 가능
+				//    ,changeMonth: true //option값  월 선택 가능                
+				//    ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+				//    ,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+				//    ,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+				//    ,buttonText: "선택" //버튼 호버 텍스트              
+				, yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
+				, monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 텍스트
+				, monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip
+				, dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 텍스트
+				, dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 Tooltip
+				, minDate: "-5Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+				, maxDate: "+5y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)  
+			});
+
+			//초기값을 오늘 날짜로 설정해줘야 합니다.
+			//    $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
+		});
+
+		$("#myTimepicker").timepicker({
+			step: 60,            //시간간격
+			timeFormat: "H:i",   //시간:분 으로표시
+			minTime: "10:00am",
+			maxTime: "11:00pm"
+		});
+
+		// 검색박스 클로즈버튼
+		function showClose(search, close) {
+			if ($(search).val().length != 0) {
+				console.log(search);
+				$(close).show();
+			} else {
+				$(close).hide();
+			}
+		}
+
+		function remove(search, close) {
+			$(close).hide();
+			$(search).val("");
+		}
+
+	</script>
+</body>
+
+</html>

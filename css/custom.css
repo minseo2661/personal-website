@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section1,
+	#section2,
+	#section3,
+	#section4,
+	#section5 {
+		background-size: cover;
+		background:#fff
+	}
+
+
+	#section3 h1{
+		color: #000;
+	}
+
+
+#pp-nav li, .pp-slidesNav li { 
+	width: 15px;
+    height: 15px;
+	margin:0
+}
+
+#pp-nav li + li {margin-top:50px}
+
+#pp-nav span, .pp-slidesNav span { 
+    width: 15px;
+    height: 15px;
+	top:0; left:0; right:0; bottom:0
+}
+
+#pp-nav li .active span, .pp-slidesNav .active span {background:#418d3d}
+
+#pp-nav.right {right:70px}
+
+nav #menu > li.active > a {color:#418d3d}

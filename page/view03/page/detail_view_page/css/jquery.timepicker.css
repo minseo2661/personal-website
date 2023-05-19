@@ -1,0 +1,86 @@
+.ui-timepicker-wrapper {
+	width: 14vw;
+	background: #fff;
+	/* border: 1px solid #ddd; */
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	outline: none;
+	z-index: 10001;
+	padding: 10px;
+	border-radius: 10px;
+	left: 72vw !important;
+	}
+
+
+.ui-timepicker-wrapper::-webkit-scrollbar {width:10px}
+.ui-timepicker-wrapper::-webkit-scrollbar-thumb {height:10%; background:#161616; border-radius: 10px;}
+.ui-timepicker-wrapper::-webkit-scrollbar-track  {background:rgb(238, 238, 238); border-radius: 10px;}
+
+
+.ui-timepicker-wrapper.ui-timepicker-with-duration {
+	width: 13em;
+}
+
+.ui-timepicker-wrapper.ui-timepicker-with-duration.ui-timepicker-step-30,
+.ui-timepicker-wrapper.ui-timepicker-with-duration.ui-timepicker-step-60 {
+	width: 11em;
+}
+
+.ui-timepicker-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.ui-timepicker-duration {
+	margin-left: 5px; color: #888;
+}
+
+.ui-timepicker-list:hover .ui-timepicker-duration {
+	color: #888;
+}
+
+.ui-timepicker-list li {
+	padding: 0.3vw 0vw;
+	margin: 0.4vw;
+	cursor: pointer;
+	white-space: nowrap;
+	color:#161616;
+	list-style : none;
+	font-size: 0.8vw;
+	border : 1px solid #fff;
+	background : #f2f2f2;
+	border-radius : 10px;
+	font-family : 'NotoSansKR-Medium'
+	}
+
+.ui-timepicker-list:hover .ui-timepicker-selected {
+	background: #fff; color: #000;
+}
+
+li.ui-timepicker-selected,
+.ui-timepicker-list li:hover,
+.ui-timepicker-list .ui-timepicker-selected:hover {
+  background:#fde101; 
+}
+
+li.ui-timepicker-selected .ui-timepicker-duration,
+.ui-timepicker-list li:hover .ui-timepicker-duration {
+	color: #ccc;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled,
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+	color: #888;
+	cursor: default;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+	background: #f2f2f2;
+}

@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0; padding:0; box-sizing:border-box; outline:none}
+li {list-style:none}
+a {text-decoration:none}
+
+
+.dn-shop-searchbox {padding-top:130px; width:1200px; margin:0 auto; text-align: center;
+position:relative}
+.dn-shop-searchbox .ico {
+    width: 30px;
+    height: 30px;
+    background:url(../../../img/searchico.png) no-repeat 0 0;
+    background-size:contain;
+    display:inline-block;
+    position:absolute;
+    left: 255px;
+    top: 145px;
+    }
+.dn-shop-searchbox input {width: 740px;height: 60px;border-radius: 40px;
+    background:#f2f2f2 ;text-align: left;padding-left: 75px;
+    font-family: 'NotoSansKR-Regular';font-size: 20px;}
+.dn-shop-searchbox input::placeholder { color:#b5b5b5}
+
+.dn-shop-searchbox .delete {
+    width: 30px;
+    height: 30px;
+    background:url(../../../img/cancelico.png) no-repeat 0 0;
+    background-size:contain;
+    position: absolute;
+    right: 250px;
+    top: 145px;
+    font-size:0;
+    }
+
+.dn-shop-search-area {}
+.dn-shop-search-area .bg-color {
+    width:1280px;
+    background-color: #f7f7f7;
+    margin: 40px auto 0 auto;
+    border-radius: 30px;
+    padding-bottom: 45px;
+    }
+
+.tabnav-box-area {width:1280px;margin: 65px auto 0 auto;}
+.tabnav-box-area .tabnav-box {
+}
+.tabnav-box-area .tabnav-box .tabnav-list {display:flex;justify-content: center;column-gap: 40px;}
+.tabnav-box-area .tabnav-box .tabnav-list .tabnav {
+    padding: 5px 15px;
+}
+.tabnav-box-area .tabnav-box .tabnav-list .tabnav > a {font-size: 20px;
+    font-family: 'NotoSansKR-Medium';}
+
+.tabnav-box-area .tabnav-box .tabnav-list .tabnav.on {
+    background: #111;
+    border-radius: 20px;
+}
+.tabnav-box-area .tabnav-box .tabnav-list .tabnav.on > a {color:#fff}
+
+
+/* 헤어샵카드 */
+.shop-dn-card-area {
+}
+.shop-dn-card-area .title {font-family: 'NotoSansKR-Bold';font-size: 20px;width: 1130px;margin: 0 auto;padding: 45px 0 20px 15px;}
+
+.shop-dn-card-area .card-list {
+    width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 25px;
+}
+.shop-dn-card-area .card-list .shopcard {
+    background: #fff;
+    width: 540px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    column-gap: 24px;
+}
+.shop-dn-card-area .card-list .shopcard .card-img {
+    width: 200px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.shop-dn-card-area .card-list .shopcard .card-img > a {}
+.shop-dn-card-area .card-list .shopcard .card-img > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-dn-card-area .card-list .shopcard .shop-info {
+    line-height: 1.6;
+}
+.shop-dn-card-area .card-list .shopcard .shop-info .shoptitle {
+    font-family: 'NotoSansKR-Bold';
+    font-size: 18px;
+}
+
+.card-list .shopcard .shop-info .iconbox {}
+.card-list .shopcard .shop-info .iconbox .ico {
+    font-size: 15px;
+}
+.card-list .shopcard .shop-info .iconbox .ico.star::before {
+    background: url(../../../img/star.png) no-repeat 0 0;
+    width: 18px;
+    height: 17px;
+    margin: 0px 4px -1px 0;
+}
+.card-list .shopcard .shop-info .iconbox .ico.review::before {
+    height: 17px;
+}
+.card-list .shopcard .shop-info .address {width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;}
+.card-list .shopcard .shop-info .address,
+.card-list .shopcard .shop-info .time {
+    font-family: 'NotoSansKR-Light';
+    font-size: 16px;
+}
+
+.card-list .shopcard .shop-info .address > a,
+.card-list .shopcard .shop-info .time > a {font-family: 'NotoSansKR-Regular';
+    font-size: 16px;color: #888;} 
+
+
+.shop-dn-card-area .btn-all-result {
+    display: block;
+    margin: 50px auto 0 auto;
+    padding: 10px 20px;
+    border:  1px solid #888;
+    border-radius: 5px;
+    font-family: 'NotoSansKR-Regular';
+    font-size: 15px;
+}
+
+.shop-dn-card-area .card-list .shopcard .dn-img {
+    width: 115px;
+    height: 115px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.shop-dn-card-area .card-list .shopcard .dn-img > a {}
+.shop-dn-card-area .card-list .shopcard .dn-img > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

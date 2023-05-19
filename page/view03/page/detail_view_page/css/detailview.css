@@ -1,0 +1,485 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin:0; padding:0; box-sizing:border-box; outline:none}
+li {list-style:none}
+a {text-decoration:none}
+
+
+.detail-view-page-wrap {
+    padding: 130px 0 0 0;
+    width: 1250px;
+    margin: 0 auto;
+}
+.detail-view-page-wrap .shoptitle {
+    overflow: hidden;
+}
+.detail-view-page-wrap .shoptitle .shopname {
+    font-family: 'NotoSansKR-Bold';
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.detail-view-page-wrap .shoptitle .iconbox {}
+.detail-view-page-wrap .shoptitle .iconbox.left {
+    display: inline-block;
+    margin-left: 15px;
+}
+.detail-view-page-wrap .shoptitle .iconbox.right {
+    float: right;
+    display: inline-block;
+    margin-right: 15px;
+}
+.detail-view-page-wrap .shoptitle .iconbox .ico + .ico {margin-left: 15px;}
+.detail-view-page-wrap .shoptitle .iconbox .ico {font-size: 17px;}
+.detail-view-page-wrap .shoptitle .iconbox .ico.star::before {
+    width: 20px;
+    height: 19px;
+}
+.detail-view-page-wrap .shoptitle .iconbox .ico.review::before {
+    width: 19px;
+    height: 19px;
+}
+
+.detail-view-page-wrap .shoptitle .iconbox .ico.save::before {content:"";display:inline-block;
+    width: 20px;height: 18px;background: url(../../../img/line_heart.png) no-repeat 0 0;background-size: contain;margin: 0 4px -3px 0;}
+.detail-view-page-wrap .shoptitle .iconbox .ico.save.on::before {content:"";display:inline-block;
+    width: 20px;height: 18px;background: url(../../../img/full_heart.png) no-repeat 0 0;background-size: contain;margin: 0 4px -3px 0;}
+.detail-view-page-wrap .shoptitle .iconbox .ico.share::before {content:"";display:inline-block;
+    width: 20px;height: 18px;background: url(../../../img/shareico.png) no-repeat 0 0;background-size: contain;margin: 0 4px -3px 0;}
+.detail-view-page-wrap .shoptitle .iconbox .ico.share {margin-left:15px}
+
+.detail-view-page-wrap .shoptitle .shopimg {
+    margin-top: 20px;
+    overflow: hidden;
+}
+.detail-view-page-wrap .shoptitle .shopimg .imgbox {
+    width: 100%;
+    height: 450px;
+    background: #f2f2f2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.detail-view-page-wrap .shoptitle .shopimg .imgbox > img {width:100%; height:100%; object-fit: full;}
+.swiper .swiper-button-next {width: 35px;height: 40px;background:url(../../../img/next-ico.png) no-repeat;background-size: contain;/* margin-right: 10px; */}
+.swiper .swiper-button-prev {width: 35px;height: 40px;background:url(../../../img/prev-ico.png) no-repeat;background-size: contain;margin-left: 13px;}
+.swiper-pagination-bullet {background:#fee100}
+
+
+/* 메뉴바 */
+.shopnav-area {
+   
+    padding: 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.shopnav-area .shopnav {
+    overflow: hidden;
+}
+.shopnav-area .shopnav .nav {
+    float: left;
+}
+
+.shopnav-area .shopnav .nav + .nav {margin-left: 40px;}
+.shopnav-area .shopnav .nav .navbtn {
+    font-family: 'NotoSansKR-Medium';
+    font-size: 18px;
+}
+.shopnav-area .shopnav .nav .navbtn.on {
+    text-decoration: underline;
+    text-decoration-color: #fee100;
+    text-decoration-thickness: 6px;
+    }
+
+
+/* 매장정보 */
+.shop-info-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.shop-info-area .left-txt {
+    margin: 0 0 0 20px;
+    width: 640px;
+}
+.shop-info-area .left-txt .txt {}
+.shop-info-area .left-txt .txt + .txt {margin-top: 20px;}
+.shop-info-area .left-txt .txt .ico {width: 20px;height: 20px;display:inline-block;}
+.shop-info-area .left-txt .txt .ico.type1 {background: url(../../../img/placeico.png) no-repeat 0 0;background-size: contain;margin: 0px 0px -2px 0px;}
+.shop-info-area .left-txt .txt .ico.type2 {background: url(../../../img/timeico.png) no-repeat 0 0;background-size: contain;margin: 0px 0px -3px 0;}
+.shop-info-area .left-txt .txt .ico.type3 {background: url(../../../img/phoneico.png) no-repeat 0 0;background-size: contain;margin: 0 0px -3px 0;}
+.shop-info-area .left-txt .txt .ico.type4 {background: url(../../../img/infoico.png) no-repeat 0 0;background-size: contain;margin: 0 0 -3px 0;}
+.shop-info-area .left-txt .txt .ico.type5 {background: url(../../../img/plusico.png) no-repeat 0 0;background-size: contain;margin: 0 0 -3px 0;}
+
+.shop-info-area .left-txt .txt .tit {
+    font-family: 'NotoSansKR-Medium';
+    font-size: 17px;
+    margin-left: 5px;
+}
+.shop-info-area .left-txt .txt .explain {
+    font-size: 15px;
+    font-family: 'NotoSansKR-Light';
+    margin-top: 5px;
+}
+.shop-info-area .left-txt .txt .explain > a {text-decoration: underline;}
+
+.shop-info-area .left-txt .txt .explain-list {
+    margin: 5px 0 0 -5px;
+}
+.shop-info-area .left-txt .txt .explain-list > li {
+    background: #f2f2f2;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    font-family: 'NotoSansKR-Regular';
+    font-size: 14px;
+    margin: 5px 5px 5px 0;
+}
+
+
+/* 예약박스 */
+.shop-info-area .right-box {
+    margin-right: 20px;
+}
+.shop-info-area .right-box .reserve-box {
+    background: #fff;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 16px;
+    text-align: center;
+    padding: 30px 25px;
+}
+.shop-info-area .right-box .reserve-box .day-select-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #888;
+    border-radius: 10px;
+}
+.shop-info-area .right-box .reserve-box .day-select-box input {
+    padding: 15px 0px 15px 10px;
+    text-align: left;
+    font-family: 'NotoSansKR-Regular';
+    font-size: 15px;
+    background:none;
+    width: 100%;
+}
+.right-box .reserve-box .day-select-box input + input {border-left:1px solid #888}
+
+
+/* 디자이너 선택박스 */
+.selectBox2 {
+  position: relative;
+  width: 300px;
+  padding: 15px 0 15px 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  border: 1px solid #888;
+  text-align: left;
+}
+
+.selectBox2 .label {
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'NotoSansKR-Regular';
+  text-align: left;
+  font-size: 15px;
+}
+
+.selectBox2 .optionList {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 0;
+  /* transition: .3s ease-in; */
+  border: 1px solid #888;
+  display: none;
+ 
+}
+
+.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background:rgb(238, 238, 238); border-radius: 10px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb {height:10%; background:#161616; border-radius: 10px;}
+
+
+.selectBox2.active .optionList {
+  max-height: 400px;
+  display:initial;
+}
+
+.selectBox2 .optionItem {
+  padding: 10px 0px 10px 10px;
+  transition: .1s;
+  font-family: 'NotoSansKR-Regular';
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.selectBox2 .optionItem:hover {
+  background: #f2f2f2;
+  border-radius: 10px;
+  font-family: 'NotoSansKR-Bold';
+}
+
+.selectBox2 .optionItem:last-child {
+  border-bottom: 0 none;
+}
+
+
+
+
+/* 예약하기 버튼 */
+.shop-info-area .right-box .reserve-box .reservebtn {
+    width: 200px;
+    background: #fee100;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-top: 25px;
+    font-family: 'NotoSansKR-Medium';
+}
+
+
+/* 픽메뉴 */
+.cont-area {
+    margin-top: 25px;
+    padding: 0px 0 50px 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.cont-area .h3 {
+    font-family: 'NotoSansKR-Bold';
+    font-size: 20px;
+}
+.cont-area .pickmenu-card-list {}
+
+.pickmenu-card {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+.pickmenu-card .pickmenu {
+    display: flex;
+    column-gap: 15px;
+}
+.pickmenu-card .pickmenu .menu-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.pickmenu-card .pickmenu .menu-img > a  {}
+.pickmenu-card .pickmenu .menu-img > a img {width:100%; height:100%; object-fit: cover; }
+
+.pickmenu-card .pickmenu .menu-info {}
+.pickmenu-card .pickmenu .menu-info .menu-name {
+    font-family: 'NotoSansKR-Medium';
+    font-size: 17px;
+}
+
+.pickmenu-card .pickmenu .menu-info .menu-price {}
+.pickmenu-card .pickmenu .menu-info .menu-price .price {
+    font-family: 'NotoSansKR-Medium';
+    font-size: 17px;
+}
+.pickmenu-card .pickmenu .menu-info .menu-price .discount {text-decoration: line-through;color: #888;font-family: 'NotoSansKR-Regular';font-size: 16px;}
+.pickmenu-card .pickmenu .menu-info .menu-price .sale {
+    color: red;
+    font-family: 'NotoSansKR-Medium';
+    font-size: 16px;
+}
+
+.pickmenu-card .pickmenu .menu-info .menu-opt {}
+.pickmenu-card .pickmenu .menu-info .menu-opt > span {
+    font-family: 'NotoSansKR-Regular';
+    font-size: 16px;
+}
+
+
+/* 메뉴박스 */
+.cont-area .menu-list-box {
+    margin-top: 30px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px 25px;
+    }
+.cont-area .menu-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 10px;
+}
+.cont-area .menu-box > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-area .menu-box .style-name {font-family: 'NotoSansKR-Medium';color: #888;font-size: 16px;}
+.cont-area .menu-box .style-list {width: 495px;overflow: hidden;}
+.cont-area .menu-list-box .style-list .style {
+    font-family: 'NotoSansKR-Regular';
+    font-size: 16px;
+}
+
+.cont-area .menu-list-box .style-list .price {
+    font-family: 'NotoSansKR-Medium';
+    float: right;
+}
+
+
+.btn-all-result {
+    margin: 35px auto 0 auto;
+    text-align: center;
+    display: block;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-family: 'NotoSansKR-Regular';
+    font-size: 15px;
+    padding: 10px 25px;
+}
+
+
+/* 디자이너 */
+.designer-card-list {}
+.designer-card-list .designer-card {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+}
+
+.designer-card {}
+.designer-card .designer {display:flex;column-gap: 15px;}
+.designer-card .designer .dn-img {width: 130px;height: 130px;overflow:hidden;border-radius: 50%;}
+.designer-card .designer .dn-img > a {}
+.designer-card .designer .dn-img > a > img {width:100%;height:100%;object-fit: cover;}
+
+.designer-card .designer .dn-info {
+    line-height: 1.4;
+}
+.designer-card .designer .dn-info .dn-name {
+    font-family: 'NotoSansKR-Bold';
+    font-size: 17px;
+}
+.designer-card .designer .dn-info .dn-intro {
+    font-family: 'NotoSansKR-Regular';
+    color: #888;
+    font-size: 16px;
+}
+.designer-card .designer .dn-info .dn-intro .intro {}
+.designer-card .designer .dn-info .dn-intro .career {}
+
+.designer-card .designer .dn-info .iconbox .ico.star::before {}
+.designer-card .designer .dn-info .iconbox .ico.review::before {}
+
+.designer-card .designer .dn-info .reservebtn {border:1px solid #888;padding: 3px 7px;border-radius: 5px;
+    margin-top: 25px;}
+.designer-card .designer .dn-info .reservebtn .calendar {width:15px;height:15px;background:url(../../../img/calendarico.png) no-repeat 0 0;display:inline-block;background-size:contain;margin: 0px -2px -1px 0;}
+.designer-card .designer .dn-info .reservebtn .rtxt {
+    font-family: 'NotoSansKR-Regular';
+    font-size: 15px;
+}
+
+/* 스타일 */
+.style-list-area {
+    margin-top: 20px;
+}
+.style-list-area .style-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
+}
+.style-list-area .style-picture .picture {
+    width: 240px;
+    height: 240px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.style-list-area .style-picture .picture > a {}
+.style-list-area .style-picture .picture > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 리뷰 */
+.review-list-area {margin-top:20px}
+.review-list-area .photo-review {}
+.review-list-area .photo-review .photobox {overflow:hidden}
+.review-list-area .photo-review .photobox .photo {width:170px;height:170px;border-radius: 5px;
+    overflow: hidden;}
+.review-list-area .photo-review .photobox .photo > a {}
+.review-list-area .photo-review .photobox .photo > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-list-area .text-review {margin-top: 35px;}
+.review-list-area .text-review .review-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 70px;
+}
+.review-list-area .text-review .review-box .review-card {
+}
+
+.text-review .review-box .review-card .dn-info {}
+.text-review .review-box .review-card .dn-info .style {
+    font-family: 'NotoSansKR-Medium';
+    font-size: 17px;
+}
+.text-review .review-box .review-card .dn-info .dnname {
+    font-family: 'NotoSansKR-Regular';
+    color: #888;
+    font-size: 15px;
+    margin-left: 3px;
+}
+
+.text-review .review-box .review-card .star-score {}
+.text-review .review-box .review-card .star-score .star {
+    display: inline-block;
+}
+.text-review .review-box .review-card .star-score .star .ico {
+    display: inline-block;
+    width:15px;
+    height:15px;
+    background:url(../../../img/b_star.png) no-repeat 0 0;
+    background-size: contain;
+    margin: 0 -2px -1px 0;
+    }
+
+.text-review .review-box .review-card .star-score .txt-score  {
+    font-family: 'NotoSansKR-Regular';
+    font-size: 15px;
+    margin-left: 3px;
+}
+
+.text-review .review-box .review-card .txt-cont {margin-top: 5px;}
+.text-review .review-box .review-card .txt-cont > p {
+    font-family: 'NotoSansKR-Light';
+    font-size: 16px;
+}
+
+.text-review .review-box .review-card .txt-info {
+    font-size: 14px;
+    color: #888;
+    font-family: 'NotoSansKR-Regular';
+    display:inline-block;
+    margin-top: 5px;
+}
+.text-review .review-box .review-card .txt-info .name {}
+.text-review .review-box .review-card .txt-info .time::before,
+.text-review .review-box .review-card .txt-info .visit-num::before {content:"";display: inline-block;
+    width: 1px;height: 11px;background: #f2f2f2;margin: 0px 10px 0px 10px;}
+

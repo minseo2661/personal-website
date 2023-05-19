@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+
+
+.r-side .swiper.mySwiper .swiper-wrapper .swiper-slide {
+	width: 45%;
+  }
+
+.r-side .swiper.mySwiper .swiper-wrapper .swiper-slide img {width:100%}
+
+
+
+.l-side .swiper-button-prev:after, 
+.l-side .swiper-rtl .swiper-button-next:after,
+.l-side .swiper-button-next:after, 
+.l-side .swiper-rtl .swiper-button-prev:after {display:none}
+
+.review .swiper.mySwiper .swiper-wrapper .swiper-slide {
+	width:35%;
+  }
+
+.review .swiper.mySwiper .swiper-wrapper .swiper-slide img {width:100%}
